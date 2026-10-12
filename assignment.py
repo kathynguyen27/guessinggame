@@ -5,7 +5,6 @@ import random
 #importing the random number generator
 random_number = random.randint(1,10)
 #random.randint(a,b) to restrict it to only numbers
-correct_answer = random_number
 previous_guesses = []
 #keep it empty to add in numbers later
 user_guess = -1
@@ -16,7 +15,9 @@ print("Previous Guesses:", previous_guesses)
 #this isnt necessary but just so i know theres nothing inside before we start because it was a problem before
 
 while user_guess != random_number:
+    #checking if its not the random number
     user_guess = int(input("Enter a number between 1 and 10: "))
+    #always ask for number so they can keep guessing
     while user_guess > 10 or user_guess < 1:
         print("Invalid input!, you must enter a number BETWEEN 1 and 10")
         user_guess = int(input("Enter a number between 1 and 10: "))
@@ -46,3 +47,4 @@ while user_guess != random_number:
 print("-----------------------------")
 print("Access granted!")
 print("Previous answers:", previous_guesses)
+#number succesfully guessed + displays all the attempts from before
